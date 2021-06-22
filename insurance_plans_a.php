@@ -6,7 +6,7 @@
     <script src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
-    <div class="indexHeader">
+    <div>
         <img src="logo.png" alt="Logo cannot be loaded" style="vertical-align:middle;margin:30px 60px 30px 20px;width=140;height=140">
         <img src="banner.png" alt="Banner cannot be loaded" style="vertical-align:middle;margin:30px 60px 30px 20px ;width=550;height=140">
         <button class="btnA"><span>Online Payment</span></button>
@@ -23,15 +23,6 @@
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
-    <div class="grid-containerB">
-    <?php while($row=$result->fetch_assoc()): ?>
-        <div class="grid-itemB">
-            <h2><?php echo $row['title'];?></h2>
-            <h5><?php echo $row['content'];?></h5>
-        </div>
-        <?php endwhile ?>
-    </div>
-    <p style="color:green;text-align:center;">Add new plans</p>
     <div class="grid-container">
         <div class="grid-item">
             <form action = "" method = "POST">
@@ -47,7 +38,7 @@
                 ?>
                 <button class= "btnC" type="submit" name="update">Update</button>
                 <?php else: ?>
-                    <button class= "btnC" type="submit" name="save">Save</button>
+                <button class= "btnC" type="submit" name="save">Save</button>
                 <?php endif; ?>
             </form>
         </div>
