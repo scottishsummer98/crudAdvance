@@ -14,7 +14,7 @@
     <ul>
         <li><a href="Home.php">Home</a></li>
         <li><a class="active" href="insurance_plans_a.php">Insurance Plans</a></li>
-        <li><a href="#feat">Features</a></li>
+        <li><a href="insuranceDetails_a.php">Insurance Details</a></li>
         <li><a href="#comp">Company</a></li>
         <li><a href="#onlineserv">Online Services</a></li>
         <li><a href="#officeinfo">Office Information</a></li>
@@ -54,9 +54,9 @@
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo substr($row['content'],10,30);?></td>
                     <td>
-                        <a href="insurance_plans_a.php?edit=<?php echo $row['id']; ?>"
+                        <a href="insurance_plans_a.php?edit=<?php echo $row['pid']; ?>"
                         class=btnD>Edit</a>
-                        <a href="server.php?delete=<?php echo $row['id']; ?>"
+                        <a href="server.php?delete=<?php echo $row['pid']; ?>"
                         class=btnE>Delete</a>
                     </td>
                 </tr>

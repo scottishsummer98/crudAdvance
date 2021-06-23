@@ -17,7 +17,7 @@
         <li><a href="registration.php" button onclick="on()">Registration</button></a></li>
         <li><a class="active" href="login.php">Login</a></li>
         <li><a href="login.php" button onclick="on()">Insurance Plans</a></li>
-        <li><a href="#feat">Features</a></li>
+        <li><a href="login.php" button onclick="on()">Insurance Details</a></li>
         <li><a href="#comp">Company</a></li>
         <li><a href="#onlineserv">Online Services</a></li>
         <li><a href="#officeinfo">Office Information</a></li>

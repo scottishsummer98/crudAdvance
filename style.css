@@ -118,18 +118,6 @@ body {
 .btnE:hover {
   background: #ff0b0b;
 }
-.btnF {
-  margin: 5px 5px 5px 5px;
-  text-align:center;
-  padding: 5px;
-  font-family: Verdana;
-  font-size: 15px;
-  color: white;
-  background: #005f3c;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
 
 
 ul {
@@ -256,7 +244,7 @@ h6 {
   text-align: center;
 }
 a {
-  color: white;
+  color: #005f3c;
 }
 form {
   margin-top: 20px;

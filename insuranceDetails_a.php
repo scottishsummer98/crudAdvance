@@ -11,9 +11,9 @@
         <button class="btnA"><span>Online Payment</span></button>
     </div>
     <ul>
-        <li><a class="active" href="Home.php">Home</a></li>
+        <li><a href="Home.php">Home</a></li>
         <li><a href="insurance_plans_a.php">Insurance Plans</a></li>
-        <li><a href="insuranceDetails_a.php">Insurance Details</a></li>
+        <li><a class="active" href="insuranceDetails_a.php">Insurance Details</a></li>
         <li><a href="#comp">Company</a></li>
         <li><a href="#onlineserv">Online Services</a></li>
         <li><a href="#officeinfo">Office Information</a></li>
@@ -22,18 +22,9 @@
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
-    <div class="grid-containerA">
-    <?php while($row=$result->fetch_assoc()):?>
-        <div class="grid-itemA">
-            <div class="container">
-                <h2><?php echo $row['title'];?></h2>
-            </div>
-            <div class="container">
-                <h3><?php echo substr($row['content'],0,200);?></h3>
-            </div>
-                <h3><a href="insuranceDetails_a.php?insurance_post_id=<?php echo $row['pid'];?>">See more</a></h3>
-        </div>
-    <?php endwhile ?>
+    <div class="container">
+        <h2><?php echo $row['title'];?></h2><br>
+        <h5><?php echo $row['content'];?></h5>
     </div>
 </body>
 </html>

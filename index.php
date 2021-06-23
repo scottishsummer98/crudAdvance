@@ -18,7 +18,7 @@
         <li><a href="registration.php" button onclick="on()">Registration</button></a></li>
         <li><a href="login.php" button onclick="on()">Login</button></a></li>
         <li><a href="login.php" button onclick="on()">Insurance Plans</a></li>
-        <li><a href="#feat">Features</a></li>
+        <li><a href="login.php" button onclick="on()">Insurance Details</a></li>
         <li><a href="#comp">Company</a></li>
         <li><a href="#onlineserv">Online Services</a></li>
         <li><a href="#officeinfo">Office Information</a></li>
@@ -35,9 +35,7 @@
                 <div class="container">
                     <h5><?php echo substr($row['content'],0,200);?></h5>
                 </div>
-                <button class="btnF">
-                <a href="login.php" button onclick="on()">See more</button></a></li>
-                </button>
+                <h3><a href="login.php" button onclick="on()">See more</a></h3>
             </div>
         <?php endwhile ?>
     </div>

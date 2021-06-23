@@ -3,7 +3,7 @@
 session_start();
 
 $title = $editor = $slug = $username = $email = $phonenumber = "";
-$id=0;
+$pid=0;
 $update = false;
 $errors = array();
 
@@ -126,7 +126,7 @@ $view_query = "SELECT * FROM post";
 //DELETE DATA
 if(isset($_GET['delete'])){
     $id= $_GET['delete'];
-    $del_query = "DELETE FROM `post` WHERE id=$id";
+    $del_query = "DELETE FROM `post` WHERE pid=$id";
     mysqli_query($myDb,$del_query);
     $_SESSION['message'] = "Record has been deleted";
     $_SESSION['msg_type']="danger";
@@ -137,7 +137,7 @@ if(isset($_GET['delete'])){
 if(isset($_GET['edit'])){
     $id=$_GET['edit'];
     $update = true;
-    $edit_query="SELECT * FROM post WHERE id=$id";
+    $edit_query="SELECT * FROM post WHERE pid=$id";
     $result= mysqli_query($myDb,$edit_query);
     if(count(array($result))==1){
         $row=$result->fetch_array();
@@ -152,8 +152,20 @@ if(isset($_POST['update'])){
     $title = $_POST['title'];
     $editor = $_POST['editor'];
     $slug = preg_replace('/[^a-z0-9]+/i','-',trim(strtolower($_POST['title'])));
-    $update_query = "UPDATE `post` SET `title`='$title', `content`='$editor', `slug`='$slug' WHERE id='$id'";
+    $update_query = "UPDATE `post` SET `title`='$title', `content`='$editor', `slug`='$slug' WHERE pid='$id'";
     mysqli_query($myDb,$update_query);
     header('location:insurance_plans_a.php');
 }
+
+global $row;
+
+//view details in another page
+if(isset($_GET['insurance_post_id'])){
+    $id= mysqli_real_escape_string($myDb, $_GET['insurance_post_id']);
+    $vd_query = "SELECT * FROM `post` WHERE pid=$id";
+    $result = mysqli_query($myDb,$vd_query);
+    global $row;
+    $row = mysqli_fetch_array($result);
+}
+
 ?>
