@@ -8,7 +8,7 @@ $update = false;
 $errors = array();
 
 //CONNECTING TO DATABASE
-$myDb = mysqli_connect('localhost', 'samir', 'samir1234', 'pro2') or die("Connection to database failed");
+$myDb = mysqli_connect('localhost', 'root', '', 'pro3') or die("Connection to database failed");
 
 //REGISTER
 if(isset($_POST['register']))
